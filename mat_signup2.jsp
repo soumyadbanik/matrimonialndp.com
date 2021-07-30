@@ -16,7 +16,7 @@ try{
 	int t1=stmt1.executeUpdate(q2);
 	if(t>0 && t1>0)
 	 {
-		response.sendRedirect("mat_basic.jsp");
+		response.sendRedirect("mat_basic.html");
 	 }
 	   con.close();
    }
