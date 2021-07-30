@@ -1,0 +1,68 @@
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin-top:10;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    top: 0
+}
+li {
+    float: left;
+}
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: green;
+}
+li.dropdown {
+    position: relative
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {background-color: #C0C0C0}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+</head>
+<body>
+<ul>
+  <li><a href="userhome.jsp">My Profile</a></li>
+  <li><a href="success.jsp">Success Stories</a></li>
+  <li><a href="contact.jsp">Contact us</a></li>
+ 
+  <li class="dropdown">
+    <a class="dropbtn"> Search Profiles </a>
+    <div class="dropdown-content">
+      <a href="sage.jsp">search by age</a>
+      <a href="sht.jsp">search by height</a>
+      <a href="scomm.jsp">search by community</a>
+      <a href="sinc.jsp">search by income</a>
+    </div>
+  </li>
+<li> <a href="noti.jsp">Notification</a></li>
+  <li><a href="logout.jsp">Log Out</a></li>
+  <li style="float:right"><a href="about.jsp">About Us </a></li>
+</ul>

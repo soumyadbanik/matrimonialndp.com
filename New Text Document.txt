@@ -1,0 +1,21 @@
+<%@include file="connect.jsp"%>
+<%@include file ="all_menu.jsp"%>
+<%
+try{
+int mid=Integer.parseInt(request.getParameter("mid"));
+Statement stmt= con.createStatement();
+String q1="select * from movie where mid = "+mid;
+ResultSet rs = stmt.executeQuery(q1);
+if(rs.next())
+{
+out.println("<br> MOVIE ID: "+rs.getInt(1));
+out.println("<br> MOVIE NAME: "+rs.getString(2)); 
+out.println("<br> MOVIE CASTING: "+rs.getString(3)); 
+out.println("<br> MOVIE DURATION: "+rs.getString(4));
+}
+else
+out.println("<font color=red>INVALID MOVIE NAME");
+con.close();
+}
+catch(Exception e){}
+%>  
